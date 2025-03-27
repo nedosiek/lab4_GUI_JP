@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="537.0" prefWidth="964.0" style="-fx-background-image: url('https://cdn.shopify.com/s/files/1/0141/5242/t/16/assets/fitsix-4-bright_LIQo.jpg?v=162012172235'); -fx-background-repeat: stretch; -fx-background-position: center;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.fitness_tracker.controllers.WorkoutController">
+    <children>
+        <VBox layoutY="67.0" prefHeight="470.0" prefWidth="169.0" style="-fx-background-color: #294923;">
+            <children>
+                <HBox prefHeight="57.0" prefWidth="169.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#menuPageOnClick" prefHeight="69.0" prefWidth="186.0" text="Menu" />
+                    </children>
+                </HBox>
+                <HBox prefHeight="57.0" prefWidth="169.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#exercisePageOnClick" prefHeight="111.0" prefWidth="308.0" text="Excercises" />
+                    </children>
+                </HBox>
+                <HBox prefHeight="57.0" prefWidth="169.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#exerciseDetailPageOnClick" prefHeight="178.0" prefWidth="429.0" text="ExerciseDetail" />
+                    </children>
+                </HBox>
+                <HBox prefHeight="57.0" prefWidth="169.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#workoutPageOnClick" prefHeight="103.0" prefWidth="263.0" text="Workouts" />
+                    </children>
+                </HBox>
+                <HBox prefHeight="57.0" prefWidth="169.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#goalPageOnClick" prefHeight="152.0" prefWidth="383.0" text="Goals" />
+                    </children>
+                </HBox>
+                <HBox prefHeight="57.0" prefWidth="169.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#trainingSessionPageOnClick" prefHeight="134.0" prefWidth="393.0" text="Sessions" />
+                    </children>
+                </HBox>
+                <HBox prefHeight="57.0" prefWidth="169.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#VisualizationPageOnClick" prefHeight="178.0" prefWidth="429.0" text="Visualization" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <Pane prefHeight="68.0" prefWidth="964.0" style="-fx-background-color: #294923;">
+            <children>
+                <Label prefHeight="68.0" prefWidth="186.0" textAlignment="CENTER" text="Fitness Tracker">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                    <textFill>
+                        <LinearGradient startX="0.7535545023696683" startY="1.0">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="0.6710526347160339" green="0.6710526347160339" blue="0.6710526347160339" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.21476510067114093">
+                                    <color>
+                                        <Color red="0.6710526347160339" green="0.6710526347160339" blue="0.6710526347160339" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="1.0" green="1.0" blue="1.0" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                </Label>
+            </children>
+        </Pane>
+        <ScrollPane fx:id="workoutPane" layoutX="197.0" layoutY="139.0" prefHeight="369.0" prefWidth="720.0">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+        </ScrollPane>
+      <TextField fx:id="workoutField" layoutX="197.0" layoutY="102.0" prefHeight="25.0" prefWidth="115.0" promptText="workout name" />
+      <Button layoutX="320.0" layoutY="102.0" mnemonicParsing="false" text="Create Workout"  onAction="#addWorkout"/>
+      <ComboBox fx:id="chooseWorkout" layoutX="530.0" layoutY="91.0" prefHeight="25.0" prefWidth="135.0" promptText="choose workout"/>
+      <ComboBox fx:id="chooseExercise" layoutX="672.0" layoutY="91.0" prefHeight="25.0" prefWidth="135.0" promptText="choose exercise" />
+      <Button layoutX="817.0" layoutY="79.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="100.0" text="Add exercise to workout" textAlignment="CENTER" wrapText="true" onAction="#addExerciseToWorkout"/>
+    </children>
+</AnchorPane>
